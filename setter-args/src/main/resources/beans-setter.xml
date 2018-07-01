@@ -3,9 +3,12 @@
        xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="organization" class="com.udemy.buchalka.spring.constructor.Setter">
+    <bean id="organization" class="com.udemy.buchalka.spring.setter.Organization">
 
         <constructor-arg index="0" value="BMW"/>
         <constructor-arg index="1" value="1929"/>
+
+        <property name="postcalCode" value="56565"/>
+        <property name="yearOfIncorparation" value="123"/>
     </bean>
 </beans>

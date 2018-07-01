@@ -10,6 +10,7 @@
     <modules>
         <module>demo-challenge</module>
         <module>constructor</module>
+        <module>setter-args</module>
     </modules>
     <packaging>pom</packaging>
 
