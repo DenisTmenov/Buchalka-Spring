@@ -11,6 +11,7 @@
         <module>demo-challenge</module>
         <module>constructor</module>
         <module>setter-args</module>
+        <module>di-setter</module>
     </modules>
     <packaging>pom</packaging>
 

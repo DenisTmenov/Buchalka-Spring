@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="organization" class="com.udemy.buchalka.spring.domain.Organization">
+        <constructor-arg index="0" value="BMW"/>
+        <constructor-arg index="1" value="1929"/>
+
+        <property name="postcalCode" value="56565"/>
+        <property name="yearOfIncorparation" value="123"/>
+
+        <property name="slogan" value="Work hard, have fun, make history."/>
+        <property name="businessService" ref="cloudService"/>
+    </bean>
+
+        <bean id="cloudService" class="com.udemy.buchalka.spring.serviceimpl.CloudServiceImpl">
+    </bean>
+
+    <bean id="economeService" class="com.udemy.buchalka.spring.serviceimpl.EcommerceServiceImpl">
+    </bean>
+
+    <bean id="agency" class="com.udemy.buchalka.spring.serviceimpl.ArgencyRecruitmentServiceImpl">
+    </bean>
+
+    <bean id="referral" class="com.udemy.buchalka.spring.serviceimpl.ReferralRecruitmentServiceImpl">
+
+    </bean>
+
+    <bean id="myHrDept" class="com.udemy.buchalka.spring.domain.HumanResourceDept">
+
+        <constructor-arg index="0" ref="agency"/>
+        <constructor-arg index="1" ref="organization"/>
+
+        <property name="departmentName" value="Human Resource Department"/>
+    </bean>
+    
+</beans>
